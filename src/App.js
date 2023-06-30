@@ -30,7 +30,11 @@ const App = ()=>{
     <input type="text" onChange={e => setSearch(e.target.value)} value={search} className="search-bar"/>
     <button type="submit" className="search-button">Search</button>
   </form>
-  {dishes.map((item,idx)=> <Recipe recipelist={item} key={idx}/>)}
+  <div className="recipes">
+  {dishes.map((item,idx)=> <Recipe recipelist={item} key={idx}/>)  }
+
+  </div>
+  
   </div>
 }
 export default App
